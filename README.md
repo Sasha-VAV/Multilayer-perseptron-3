@@ -1,3 +1,6 @@
+Current condition:
+Supports only 2 layers
+
 Open config.txt and change its structure
 
 Structure of config.txt:
