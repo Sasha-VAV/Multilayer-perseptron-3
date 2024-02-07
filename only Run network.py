@@ -91,8 +91,14 @@ inputs = list(map(float, cfg[-1].split()))
 func = Function
 Function.__init__(func, int(cfg[-2]))
 
-size = list(map(int, cfg[:-2]))
-Net = Network
-Network.__init__(Net, size, cfg[-2][:1], inputs, func)
-Network.forward_feed(Net)
-print(Net.network[-1])
+while len(inputs) == int(cfg[0]):
+    size = list(map(int, cfg[:-2]))
+    Net = Network
+    Network.__init__(Net, size, cfg[-2][:1], inputs, func)
+    Network.forward_feed(Net)
+    print(Net.network[-1])
+    output_string = ''
+    for x in Net.network[-1]:
+        output_string += str(round(x)) + ' '
+    print(f'Result: {output_string[:-1]}')
+    inputs = list(map(float, input(f'Insert new input ( to stop press "Enter")\n').split()))

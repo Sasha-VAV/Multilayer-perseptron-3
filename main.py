@@ -15,7 +15,7 @@ cfg = readfile[0].split()
 cfg.append(readfile[1])  # adding function number in the end
 match readfile[2]:
     case "0":
-        inputstring = input()  # working with 1d arrays rn
+        inputstring = input()  # working with 1d arrays rnV
         cfg.append(inputstring)
         process = subprocess.run(['python', 'only Run network.py', *cfg])
     case "1":
