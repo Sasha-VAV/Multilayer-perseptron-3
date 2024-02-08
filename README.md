@@ -1,7 +1,4 @@
-Current condition:
-Supports only 2 layers
-
-Open config.txt and change its structure
+Open config.txt and change it's structure
 
 Structure of config.txt:
 0 line: number of neurons in each layer
